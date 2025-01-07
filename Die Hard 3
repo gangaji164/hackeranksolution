@@ -1,0 +1,35 @@
+#include <assert.h>
+#include <ctype.h>
+#include <limits.h>
+#include <math.h>
+#include <stdbool.h>
+#include <stddef.h>
+#include <stdint.h>
+#include <stdio.h>
+#include <stdlib.h>
+#include <string.h>
+int gcd(int x,int y){
+    while(y!=0){
+        int temp=y;
+        y=x%y;
+        x=temp;
+    }
+    return x;
+}
+int main(){
+    int t;
+    scanf("%d",&t);
+    while(t--){
+    int a,b,c;
+    scanf("%d %d %d",&a,&b,&c);
+    int g=gcd(a,b);
+    if(c<=(a>b?a:b)&& c%g==0)
+    {
+        printf("YES\n");
+    }
+    else{
+        printf("NO\n");
+    }}
+    return 0;
+    
+}
